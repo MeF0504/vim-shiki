@@ -1,7 +1,7 @@
 " Vim color file
 " Name:     shiki
 " Author:   MeF0504
-" Github:   https://github.com/MeF0504/
+" Github:   https://github.com/MeF0504/vim-shiki
 "
 
 highlight clear
