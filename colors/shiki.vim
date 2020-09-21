@@ -52,7 +52,6 @@ function! s:ret_color_id(cid)
         let r = cid/36
         let g = (cid-r*36)/6
         let b = cid%6
-        " echo 'r:'.r.' g:'.g.' b:'.b
         if r != 0
             let r = (r*40)+55
         endif
@@ -66,12 +65,6 @@ function! s:ret_color_id(cid)
     endif
 
 endfunction
-
-" " 58 ... 36*1+6*3+4
-" " 135 .. 
-" for s:n in [0, 7, 74, 68, 135, 200, 223, 235, 242, 255]
-"     echo s:n.' => '.s:ret_color_id(s:n)
-" endfor
 
 let s:color_def = {}
 " :h group-name
