@@ -68,7 +68,7 @@ endfunction
 
 let s:color_def = {}
 " :h group-name
-let s:color_def["Normal"]           = [254, -1, '']
+let s:color_def["Normal"]           = [254, 232, '']
 let s:color_def["Error"]            = [255, 9, 'Bold']
 
 " Spring
