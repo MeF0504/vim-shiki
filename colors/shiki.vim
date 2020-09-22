@@ -132,7 +132,7 @@ let s:color_def["Folded"]           = [253, 93, 'Bold']
 let s:color_def["SignColumn"]       = [207, -1, 'Bold']
 let s:color_def["LineNr"]           = [219, 0, '']
 let s:color_def["CursorLineNr"]     = [234, 250, '']
-let s:color_def["QuickFixLine"]     = [254, 45, '']
+let s:color_def["QuickFixLine"]     = [254, 53, '']
 let s:color_def["Title"]            = [207, -1, 'Bold']
 
 " Summer
