@@ -103,7 +103,7 @@ let s:color_def["Type"]             = [83, -1, 'Bold']
 " Autumn
 
 " Winter
-let s:color_def["Comment"]          = [242, -1, '']
+let s:color_def["Comment"]          = [244, -1, '']
 " let s:color_def["SpecialChar"]    = 
 " let s:color_def["Tag"]            = 
 " let s:color_def["Delimiter"]      = 
