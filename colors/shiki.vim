@@ -79,7 +79,7 @@ let s:color_def["PreProc"]          = [105, -1, '']
 " let s:color_def["Precondit"]      = 
 
 " Summer
-let s:color_def["Identifier"]       = [33, -1, '']
+let s:color_def["Identifier"]       = [33, -1, 'None']
 " let s:color_def["Function"]       = 
 let s:color_def["Statement"]        = [39, -1, 'Bold']
 " let s:color_def["Conditional"]    = 
@@ -144,7 +144,7 @@ let s:color_def["DiffChange"]       = [253, 94, '']
 let s:color_def["DiffDelete"]       = [253, 88, '']
 let s:color_def["DiffText"]         = [253, 130, 'Bold']
 let s:color_def["IncSearch"]        = [254, 166, 'Bold']
-let s:color_def["MatchParen"]       = [196, 'NONE', 'Bold']
+let s:color_def["MatchParen"]       = [196, 'None', 'Bold']
 let s:color_def["Search"]           = [252, 124, 'Bold']
 let s:color_def["Pmenu"]            = [253, 240, '']
 let s:color_def["PmenuSel"]         = [235, 221, 'Bold']
