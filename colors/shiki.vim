@@ -12,11 +12,11 @@ endif
 let g:colors_name = 'shiki'
 set background=dark
 
-function! s:ret_color_id(cid)
+function! s:ret_color_id(cid, gui)
     if type(a:cid) == type('a')
         return a:cid
     endif
-    if !has('gui_running')
+    if !a:gui
         return a:cid
     endif
     " https://jonasjacek.github.io/colors/
@@ -166,22 +166,19 @@ let s:color_def["NonText"]          = [38, -1, '']
 let s:color_def["Question"]         = [7, -1, 'Bold']
 let s:color_def["Visual"]           = [253, 18, '']
 
-if has('gui_running')
-    let s:t = 'gui'
-else
-    let s:t = 'cterm'
-endif
-
 for s:kn in keys(s:color_def)
     let s:exe_cmd = 'highlight '.s:kn
     if s:color_def[s:kn][0] >= 0
-        let s:exe_cmd .= ' '.s:t.'fg='.s:ret_color_id(s:color_def[s:kn][0])
+        let s:exe_cmd .= ' ctermfg='.s:ret_color_id(s:color_def[s:kn][0], 0)
+        let s:exe_cmd .= ' guifg='.s:ret_color_id(s:color_def[s:kn][0], 1)
     endif
     if s:color_def[s:kn][1] >= 0
-        let s:exe_cmd .= ' '.s:t.'bg='.s:ret_color_id(s:color_def[s:kn][1])
+        let s:exe_cmd .= ' ctermbg='.s:ret_color_id(s:color_def[s:kn][1], 0)
+        let s:exe_cmd .= ' guibg='.s:ret_color_id(s:color_def[s:kn][1], 1)
     endif
     if s:color_def[s:kn][2] != ''
-        let s:exe_cmd .= ' '.s:t.'='.s:color_def[s:kn][2]
+        let s:exe_cmd .= ' cterm='.s:color_def[s:kn][2]
+        let s:exe_cmd .= ' gui='.s:color_def[s:kn][2]
     endif
     execute s:exe_cmd
     " echo s:exe_cmd
